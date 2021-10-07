@@ -10,6 +10,8 @@ namespace AbstractFactoryPatternExample.Factories
         {
             if (typeOfShip == TypeOfShip.UFO)
             {
+                // The factories determine what weapons and engines the ships get and you end up with a generic enemyShip
+                // with the specific properties you want
                 var enemyShipFactory = new UfoEnemyShipFactory();
                 var enemyShip = new UfoEnemyShip(enemyShipFactory);
                 return enemyShip;

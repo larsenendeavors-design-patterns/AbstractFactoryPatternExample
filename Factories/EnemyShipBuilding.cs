@@ -9,6 +9,7 @@ namespace AbstractFactoryPatternExample.Factories
 
         public EnemyShip OrderTheShip(TypeOfShip typeOfShip)
         {
+            // The ship is made here, based on the enum you pass in which determines what factory it gets
             var enemyShip = MakeEnemyShip(typeOfShip);
 
             enemyShip.Create();
